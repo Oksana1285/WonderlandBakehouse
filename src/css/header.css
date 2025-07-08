@@ -1,44 +1,220 @@
-.header {
-  padding: 20px 0;
+body.noscroll {
+  overflow: hidden;
 }
+
+/* Контейнер header */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   min-width: max-content;
+}
+
+/* Навігація */
 .nav {
   display: flex;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
+   padding: 50px 16px;
+ }
+
+/* Списки навігації */
+.nav-left {
+  display: flex;
+  list-style: none;
+  padding-right:54.66;
+  gap: 41.33px;
+  flex-wrap: nowrap;
 }
-.nav-list {
+
+.nav-right{
+  display: flex;
+  list-style: none;
+  gap: 19px;
+ }
+
+.nav-list-left {  
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 40px;
 }
+
+.nav-list-right {  
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+/* Логотип */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ margin-left: 59px;
+ margin-right: 55px;
+}
+
+/* Окремий пункт меню з кнопкою */
+.nav-item-desserts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  }
+
+/* Посилання */
 .nav-link {
   position: relative;
   display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
 }
+
+.nav-link:disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #fae6aa;
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+
+.nav-link:active {
+  color: #fae6aa;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+/* Кнопка біля десертів */
+.button-desserts {
+  background-color: transparent;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms ease;
+  border: none;
+  cursor: pointer;
+  fill: currentColor;
+}
+
+.button-desserts-icon {
+  fill: none;
+  stroke: #fafafa;
+  transition: stroke 250ms ease, transform 250ms ease;
+} 
+
+.nav-item-desserts {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer; 
+  transition: color 250ms ease;
+}
+
+.nav-item-desserts:hover .nav-link,
+.nav-item-desserts:focus .nav-link,
+.nav-item-desserts:hover .button-desserts-icon,
+.nav-item-desserts:focus .button-desserts-icon {
+  color: #fae6aa;
+  stroke: #fae6aa;
+}
+
+/* Контакти */
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 19px;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-link {
+  display: inline-flex;
+  font-family: 'Arimo', sans-serif;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #fae6aa;
+  text-decoration: none;
+  transition: color 250ms ease;
+
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+ text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #fae6aa;
+}
+
+.icon-phone {
+  stroke: currentColor;
+  fill: currentColor;
+  transition: stroke 250ms ease;
+}
+
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+ }
+
+.social-icon-item
+{
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  justify-content: center;
+  fill: #fafafa;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-link:disabled {
+  fill: #0a0a05;
+}
+
+.social-icon-link:hover {
+  background-color: #fae6aa;
+} 
+
+.social-icon-link:hover .social-icon-icon{
+ fill: #0a0a05;
+}
+
+
+.social-icon-link:active {
+  background-color: #fff5d7;
+}
+
+.social-icon-link:active .social-icon-icon{
+  fill: #0a0a05;
+}
+
+.nav-item {
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
