@@ -42,3 +42,12 @@ const updateNavigationButtons = () => {
 swiper.on('slideChange', updateNavigationButtons);
 
 updateNavigationButtons();
+
+
+  document.querySelectorAll('.hero-swiper-slide').forEach(slide => {
+    const bg = slide.getAttribute('data-bg');
+    if (bg) {
+      slide.style.setProperty('--slide-bg', `url(${bg})`);
+    }
+  });
+

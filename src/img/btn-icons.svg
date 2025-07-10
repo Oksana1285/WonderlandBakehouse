@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="icon-btn-left" viewBox="0 0 64 32">
+      <path stroke-width="2.992" d="M63.791 15.757H2.446m0 0L15.912 2.291M2.446 15.757l13.466 13.466"/>
+    </symbol>
+    <symbol id="icon-btn-right" viewBox="0 0 66 32">
+      <path stroke-width="2.992" d="M1.643 15.757h61.345m0 0L49.522 2.291m13.466 13.466L49.522 29.223"/>
+    </symbol>
+  </defs>
+</svg>
